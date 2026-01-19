@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>*** ЗИМНИЙ ЧАТ 98 ***</title>
+    <style>
+        body {
+            background-color: #000080; /* Темно-синий фон */
+            color: #FFFFFF;
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .main-table {
+            width: 760px;
+            border: 4px ridge #C0C0C0;
+            background-color: #004040; /* Темно-зеленый */
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .header-area {
+            text-align: center;
+            border-bottom: 3px double #ffffff;
+            padding: 10px;
+        }
+
+        .chat-container {
+            background-color: #000000;
+            padding: 15px;
+            border: 3px inset #C0C0C0;
+            margin: 10px;
+        }
+
+        /* Окно сообщений как в старых чатах */
+        #chat-window {
+            height: 300px;
+            background-color: #fff;
+            color: #000;
+            border: 2px inset #fff;
+            overflow-y: scroll;
+            padding: 10px;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .input-bar {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            border: 2px inset #C0C0C0;
+            padding: 5px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        button {
+            background-color: #C0C0C0;
+            border: 2px outset #fff;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+
+        button:active { border: 2px inset #fff; }
+
+        .system-msg { color: #808080; font-style: italic; }
+        .user-name { color: #ff0000; font-weight: bold; }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            background-color: #C0C0C0;
+            color: #000;
+            padding: 5px;
+        }
+
+        a { color: #00FFFF; text-decoration: underline; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<table class="main-table">
+    <tr>
+        <td class="header-area">
+            <img src="NewYearTree.png" height="50" alt="елка">
+            <h2 style="margin:5px;">ЗИМНИЙ ЧАТ "ПЛАНЕТА 98"</h2>
+            <marquee scrollamount="3" style="background: #FF0000; color: #FFFF00; border: 1px solid #000;">
+                ВНИМАНИЕ: Соблюдайте правила приличия! Не флудить! Модератор: Admin_98
+            </marquee>
+        </td>
+    </tr>
+    <tr>
+        <td class="chat-container">
+            <div id="chat-window">
+                <div class="system-msg">*** Соединение с сервером... ОК.</div>
+                <div class="system-msg">*** Вы вошли в комнату #НОВЫЙ_ГОД</div>
+                <div><span class="user-name">&lt;Admin&gt;</span> Всем привет! Как準備 к празднику?</div>
+            </div>
+
+            <div class="input-bar">
+                <input type="text" id="nick" placeholder="Ник" style="width: 100px;">
+                <input type="text" id="msg" placeholder="Сообщение..." style="flex-grow: 1;">
+                <button onclick="send()">ОТПРАВИТЬ</button>
+            </div>
+            
+            <center>
+                <a href="index.html">[ ВЕРНУТЬСЯ НА ГЛАВНУЮ ]</a>
+            </center>
+        </td>
+    </tr>
+    <tr>
+        <td class="footer">
+            1998 Chat Engine v1.0 | <img src="https://web.archive.org/web/20090830235941im_/http://geocities.com/Heartland/Acres/2353/notepad.gif" height="15">
+        </td>
+    </tr>
+</table>
+
+<script>
+    function send() {
+        const nick = document.getElementById('nick').value || "Гость";
+        const msg = document.getElementById('msg').value;
+        const win = document.getElementById('chat-window');
+
+        if (msg.trim() !== "") {
+            const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            const div = document.createElement('div');
+            div.innerHTML = `<span style="color:gray">[${time}]</span> <span class="user-name">&lt;${nick}&gt;</span> ${msg}`;
+            win.appendChild(div);
+            
+            document.getElementById('msg').value = "";
+            win.scrollTop = win.scrollHeight;
+
+            // Локальное сохранение (будет видно только тебе после обновления)
+            localStorage.setItem('chat_backup', win.innerHTML);
+        }
+    }
+
+    // Восстановление истории
+    window.onload = function() {
+        if(localStorage.getItem('chat_backup')) {
+            document.getElementById('chat-window').innerHTML = localStorage.getItem('chat_backup');
+        }
+    }
+</script>
+
+</body>
+</html>

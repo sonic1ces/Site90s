@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>*** МУЗЫКАЛЬНЫЙ АРХИВ 1998 - БЛУЖДАЮЩИЙ ОГОНЬ ***</title>
+    <style>
+        body {
+            background-color: #000080;
+            color: #FFFFFF;
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-table {
+            width: 760px;
+            border: 4px ridge #C0C0C0;
+            background-color: #004040;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .header-area {
+            text-align: center;
+            border-bottom: 3px double #ffffff;
+            padding: 15px;
+        }
+
+        .content-area {
+            background-color: #000000;
+            padding: 20px;
+            border: 3px inset #C0C0C0;
+            margin: 10px;
+        }
+
+        /* Стиль Winamp */
+        .winamp-box {
+            background-color: #272727;
+            border: 3px outset #808080;
+            padding: 10px;
+            width: 320px;
+            margin: 20px auto;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+        }
+
+        .mp3-list {
+            width: 100%;
+            border-collapse: collapse;
+            color: #00FF00;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .mp3-list td {
+            border-bottom: 1px dashed #444;
+            padding: 8px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 3px 10px;
+            border: 2px outset #fff;
+            background: #c0c0c0;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 11px;
+        }
+
+        .download-btn:active {
+            border: 2px inset #fff;
+        }
+
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        marquee {
+            background: #000;
+            color: #FFFF00;
+            border: 1px solid #FFFF00;
+            padding: 3px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            background-color: #C0C0C0;
+            color: #000;
+            padding: 10px;
+        }
+
+        a.back-link { color: #00FFFF; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<table class="main-table">
+    <tr>
+        <td class="header-area">
+            <img src="NewYearTree.png" height="60" alt="елка">
+            <h1 style="margin: 10px 0;">МУЗЫКАЛЬНАЯ ЗОНА '98</h1>
+            <marquee scrollamount="4">
+                >>> СЛУШАЙТЕ ЭКСКЛЮЗИВНЫЙ ИНСТРУМЕНТАЛ "БЛУЖДАЮЩИЙ ОГОНЬ" (ЗАПИСЬ 1995 ГОДА) --- ВСЕГО 30 КБ! <<<
+            </marquee>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="content-area">
+            
+            <center>
+                <div style="border: 2px ridge #FFFF00; padding: 15px; background: #002020; width: 500px;">
+                    <h2 style="color: #FFFF00; margin-top: 0;">🔥 ГЛАВНЫЙ РЕЛИЗ 🔥</h2>
+                    <p style="color: #00FFFF; font-style: italic;">"Блуждающий огонь" (1995)</p>
+                    
+                    <div class="winamp-box">
+                        <div style="font-size: 10px; color: #888;">WINAMP 2.0 - MIDI PLAYER</div>
+                        <div style="margin: 5px 0; overflow: hidden; white-space: nowrap;">
+                            <span class="blink">>>></span> Instrumental_1995.mid
+                        </div>
+                        <audio controls style="width: 100%; height: 30px; margin-top: 5px;">
+                            <source src="fire.mid" type="audio/midi">
+                            <source src="fire.mid" type="audio/mpeg"> </audio>
+                        <div style="font-size: 9px; text-align: right; color: #00FF00;">30 KB / MIDI GEN</div>
+                    </div>
+
+                    <a href="fire.mid" class="download-btn">💾 СКАЧАТЬ MIDI (30 КБ)</a>
+                    <p style="font-size: 11px; color: #aaa; margin-top: 10px;">
+                        Записано в домашней студии в 1995 году. Наслаждайтесь!
+                    </p>
+                </div>
+            </center>
+
+            <br>
+
+            <h3 style="color: #00FF00; border-bottom: 1px solid #00FF00;">Другие файлы в архиве:</h3>
+            <table class="mp3-list">
+                <tr>
+                    <td><img src="https://web.archive.org/web/20091024021235im_/http://geocities.com/SiliconValley/Hills/1359/animated_gifs/floppy.gif" width="16"> track01.mp3</td>
+                    <td>Eurodance Mix 98</td>
+                    <td>4.2 MB</td>
+                    <td><a href="#" class="download-btn">DL</a></td>
+                </tr>
+                <tr>
+                    <td><img src="https://web.archive.org/web/20091024021235im_/http://geocities.com/SiliconValley/Hills/1359/animated_gifs/floppy.gif" width="16"> winter_hits.zip</td>
+                    <td>Сборник "Снежный"</td>
+                    <td>12.5 MB</td>
+                    <td><a href="#" class="download-btn">DL</a></td>
+                </tr>
+            </table>
+
+            <br>
+            <center>
+                <img src="Sugrob.png" width="200" alt="сугроб">
+                <br><br>
+                <a href="index.html" class="back-link">[ ВЕРНУТЬСЯ НА ГЛАВНУЮ СТРАНИЦУ ]</a>
+            </center>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="footer">
+            <p>Best viewed with <b>Netscape Navigator</b> & <b>Sound Blaster 16</b></p>
+            <img src="https://web.archive.org/web/20091027102835im_/http://geocities.com/SiliconValley/Hills/1359/animated_gifs/netscape.gif" alt="Netscape">
+            <img src="https://web.archive.org/web/20090830235941im_/http://geocities.com/Heartland/Acres/2353/notepad.gif" alt="Notepad">
+            <p>&copy; 1995-1998 Студия "Блуждающий Огонь"</p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

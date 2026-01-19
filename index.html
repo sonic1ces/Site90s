@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>*** ЗИМНЯЯ СТРАНИЦА - ДЕКАБРЬ 1998 ***</title>
+    <style>
+        body {
+            background-color: #000080; /* Тот самый темно-синий */
+            color: #FFFFFF;
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden; /* Чтобы снежинки не создавали горизонтальный скролл */
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        .main-table {
+            width: 760px;
+            border: 4px ridge #C0C0C0;
+            background-color: #004040; /* Темно-зеленый елочный */
+            margin: 0 auto;
+            border-collapse: collapse;
+            position: relative; /* Важно для снега, чтобы он был поверх */
+            z-index: 2; /* Поверх снежинок */
+        }
+
+        .header-area {
+            text-align: center;
+            border-bottom: 3px double #ffffff;
+            padding: 15px;
+        }
+
+        .content-area {
+            background-color: #000000;
+            padding: 20px;
+            border: 3px inset #C0C0C0;
+            margin: 10px;
+            vertical-align: top;
+        }
+
+        .sidebar {
+            width: 160px;
+            vertical-align: top;
+            text-align: center;
+            border-right: 2px solid #FFFFFF;
+            padding-top: 20px;
+        }
+
+        marquee {
+            font-weight: bold;
+            color: #FFFF00;
+            background-color: #FF0000;
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            background-color: #C0C0C0;
+            color: #000;
+            padding: 10px;
+        }
+
+        a { color: #00FFFF; font-weight: bold; text-decoration: underline; }
+        a:hover { color: #FF00FF; background-color: #fff; }
+
+        /* Стили для снежинок */
+        .snowflake {
+            color: #fff;
+            font-size: 14px; /* Типичный размер снежинок в 90-х */
+            font-family: "Arial", sans-serif;
+            text-shadow: 0 0 2px #aaa; /* Небольшое свечение */
+            position: absolute;
+            top: -10px; /* Начинают падать сверху */
+            z-index: 1; /* Под основным контентом */
+            pointer-events: none; /* Не мешают кликать */
+        }
+
+        /* Стили для таймера */
+        #timer-box {
+            background: #000; 
+            border: 2px inset #fff; 
+            padding: 10px; 
+            margin: 10px auto; /* Центрируем */
+            width: 300px; /* Фиксированная ширина */
+            color: #00FF00; 
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            position: relative; /* Важно для z-index */
+            z-index: 3; /* Таймер поверх снега и всего */
+        }
+        #timer-box div {
+            font-size: 14px; 
+            color: #fff;
+        }
+        #countdown {
+            font-size: 20px; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="snow-container"></div> <table class="main-table">
+    <tr>
+        <td colspan="2" class="header-area">
+            <img src="NewYearTree.png" alt="Моя елка">
+            <h1><span class="blink">С НОВЫМ 1999 ГОДОМ!!!</span></h1>
+            <marquee scrollamount="4">+++ ПРИВЕТ! ТЫ ЗАШЕЛ НА ЗИМНЮЮ СТРАНИЦУ +++ СЕГОДНЯ 24 ДЕКАБРЯ 1998 ГОДА +++ СЧАСТЬЯ В НОВОМ ГОДУ! +++</marquee>
+        </td>
+    </tr>
+
+    <tr>
+  <td class="sidebar">
+    <p><b>НАВИГАЦИЯ</b></p>
+    <hr width="80%">
+    <a href="index.html">ГЛАВНАЯ</a><br><br>
+    <a href="Chat.html">ЧАТ 98</a><br><br>
+    <a href="MP3.html">MP3 АРХИВ</a><br><br> <a href="Wiki.html" style="color: #FFFF00;">ВИКИ / ПРАВА</a><br> <hr width="80%">
+                
+    <p>Наш Снеговик:</p>
+    <img src="Snowman.png" width="130" alt="Снеговик">
+</td>
+
+        <td class="content-area">
+            <center>
+                <img src="SlideShow.gif" border="5" style="border-color: #FFD700;" alt="Slide Show">
+                <h2 style="color: #FFFF00;">Свежие новости:</h2>
+            </center>
+
+            <table width="100%" border="0">
+                <tr>
+                    <td width="65%">
+                        <p>Добро пожаловать! Я наконец-то загрузил все картинки на хостинг. Скоро добавлю фоновую музыку!</p>
+                        <p>На улице сугробы, а у нас в интернете всегда уютно и лампово.</p>
+                    </td>
+                    <td align="right">
+                        <img src="SnowTree.png" width="120" alt="Снежное дерево">
+                    </td>
+                </tr>
+            </table>
+
+            <center>
+                <img src="Sugrob.png" width="100%" alt="Сугроб">
+            </center>
+        </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="footer">
+        <p>Сайт оптимизирован для разрешения 800x600 точек</p>
+        <img src="https://web.archive.org/web/20091027052123im_/http://geocities.com/Heartland/Plains/9490/ie_static.gif" alt="IE">
+        <img src="https://web.archive.org/web/20090830235941im_/http://geocities.com/Heartland/Acres/2353/notepad.gif" alt="Notepad">
+        <br>
+        <b>Вы посетитель номер: 0001998</b><br>
+        <span style="font-size: 10px;">Copyright © 1995-2026 Amirxan Olegov. Music by N. Yablonskaya</span>
+    </td>
+</tr>
+</table>
+
+<div id="timer-box">
+    <div>ДО НОВОГО 1999 ГОДА ОСТАЛОСЬ:</div>
+    <div id="countdown">Загрузка таймера...</div>
+</div>
+
+<script>
+// --- СКРИПТ ПАДАЮЩЕГО СНЕГА ---
+const snowContainer = document.getElementById('snow-container');
+const numSnowflakes = 50; // Количество снежинок
+
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.innerHTML = '*'; // Простая звездочка как снежинка
+    
+    // Начальная позиция и размер
+    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    snowflake.style.opacity = Math.random() * 0.7 + 0.3; // Разная прозрачность
+    snowflake.style.fontSize = Math.random() * 10 + 8 + 'px'; // Разный размер
+    
+    // Анимация падения (скорость и продолжительность)
+    const animationDuration = Math.random() * 10 + 5; // от 5 до 15 секунд
+    snowflake.style.animation = `fall ${animationDuration}s linear infinite`;
+    snowflake.style.animationDelay = `-${Math.random() * animationDuration}s`; // Чтобы начинали падать вразнобой
+
+    snowContainer.appendChild(snowflake);
+}
+
+// Добавляем стиль для анимации падения снежинок
+const style = document.createElement('style');
+style.innerHTML = `
+    @keyframes fall {
+        to {
+            transform: translateY(${window.innerHeight + 20}px);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+
+for (let i = 0; i < numSnowflakes; i++) {
+    createSnowflake();
+}
+
+// --- СКРИПТ ТАЙМЕРА ДО НОВОГО ГОДА ---
+function updateTimer() {
+    // Устанавливаем целевую дату: 1 января 1999 года
+    // Используем текущий год для корректного отсчета, но отображаем "1999"
+    var now = new Date();
+    var targetDate = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0).getTime(); // 1 января следующего года
+    
+    // Если текущая дата уже после 1999, то это уже "будущее"
+    // Но для имитации 1998 года, мы просто рассчитываем до конца текущего года
+    var diff = targetDate - now.getTime();
+
+    if (diff < 0) {
+        document.getElementById("countdown").innerHTML = "С НОВЫМ ГОДОМ!!!";
+        return;
+    }
+
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = 
+        days + " дн. " + hours + " ч. " + minutes + " мин. " + seconds + " сек.";
+}
+
+setInterval(updateTimer, 1000);
+updateTimer(); // Запускаем таймер сразу
+</script>
+
+</body>
+</html>
