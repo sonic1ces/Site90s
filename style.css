@@ -1,0 +1,118 @@
+/* Основные настройки страницы */
+body {
+    background-color: #000080; /* Темно-синий Windows 95/98 */
+    color: #FFFFFF;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Снежинки не создают горизонтальный скролл */
+}
+
+/* Эффект мигания (Blink) */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+/* Главная таблица-контейнер */
+.main-table {
+    width: 760px;
+    border: 4px ridge #C0C0C0;
+    background-color: #004040; /* Темно-зеленый елочный */
+    margin: 0 auto;
+    border-collapse: collapse;
+    position: relative; 
+    z-index: 2; /* Чтобы контент был поверх снега */
+}
+
+/* Шапка сайта */
+.header-area {
+    text-align: center;
+    border-bottom: 3px double #ffffff;
+    padding: 15px;
+}
+
+/* Основная область контента */
+.content-area {
+    background-color: #000000;
+    padding: 20px;
+    border: 3px inset #C0C0C0;
+    margin: 10px;
+    vertical-align: top;
+}
+
+/* Боковая панель (навигация) */
+.sidebar {
+    width: 160px;
+    vertical-align: top;
+    text-align: center;
+    border-right: 2px solid #FFFFFF;
+    padding-top: 20px;
+}
+
+/* Бегущая строка */
+marquee {
+    font-weight: bold;
+    color: #FFFF00;
+    background-color: #FF0000;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+/* Нижняя часть (футер) */
+.footer {
+    text-align: center;
+    font-size: 11px;
+    background-color: #C0C0C0;
+    color: #000;
+    padding: 10px;
+}
+
+/* Ссылки */
+a { color: #00FFFF; font-weight: bold; text-decoration: underline; }
+a:hover { color: #FF00FF; background-color: #fff; }
+
+/* --- СТИЛИ ДЛЯ СНЕГА --- */
+.snowflake {
+    color: #fff;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    text-shadow: 0 0 2px #aaa;
+    position: fixed; /* Чтобы снег падал относительно экрана */
+    top: -20px;
+    z-index: 1; /* Под таблицей */
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh); /* Падение за нижнюю границу экрана */
+    }
+}
+
+/* --- ТАЙМЕР ОБРАТНОГО ОТСЧЕТА --- */
+#timer-box {
+    background: #000; 
+    border: 2px inset #fff; 
+    padding: 10px; 
+    margin: 10px auto;
+    width: 300px;
+    color: #00FF00; 
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    position: relative;
+    z-index: 3; /* Поверх всего */
+}
+
+#timer-box div {
+    font-size: 14px; 
+    color: #fff;
+}
+
+#countdown {
+    font-size: 20px; 
+    font-weight: bold;
+}

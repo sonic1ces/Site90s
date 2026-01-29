@@ -1,0 +1,14 @@
+body { background-color: #000080; color: #FFFFFF; font-family: "Times New Roman", serif; margin: 0; padding: 20px; }
+.main-table { width: 760px; border: 4px ridge #C0C0C0; background-color: #004040; margin: 0 auto; border-collapse: collapse; }
+.header-area { text-align: center; border-bottom: 3px double #ffffff; padding: 15px; }
+.content-area { background-color: #000000; padding: 20px; border: 3px inset #C0C0C0; margin: 10px; color: #fff; }
+
+/* Стили документа */
+.doc-box { background-color: #fff; color: #000; padding: 20px; border: 2px inset #fff; font-family: Arial, sans-serif; margin-top: 10px; }
+.stamp { border: 3px solid #FF0000; color: #FF0000; display: inline-block; padding: 5px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; transform: rotate(-2deg); }
+.trusted-list { background: #e0e0e0; padding: 10px; border-left: 5px solid #000080; font-family: monospace; margin: 10px 0; }
+.footer { text-align: center; font-size: 11px; background-color: #C0C0C0; color: #000; padding: 10px; }
+.warning-box { background: #ffcccc; padding: 10px; border: 1px dashed red; }
+
+a { color: #00FFFF; font-weight: bold; }
+h2, h3 { color: #004040; margin-top: 0; }

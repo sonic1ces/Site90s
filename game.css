@@ -1,0 +1,29 @@
+.game-window {
+    width: 550px;
+    background: #c0c0c0;
+    border: 3px outset #eee;
+    margin: 20px auto;
+    box-shadow: 2px 2px 0 #000;
+}
+.game-title {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 3px 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.game-content {
+    border: 2px inset #fff;
+    background: #000;
+    height: 400px;
+}
+.status-bar {
+    background: #c0c0c0;
+    border-top: 1px solid #808080;
+    padding: 2px;
+    font-size: 11px;
+    color: #000;
+}
